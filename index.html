@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador</title>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="scriptteste.js" defer></script>
+</head>
+<body>
+
+    <p> Codificador Resilia</p>
+
+    <form action="">
+        <div class="entradaUser">
+        <textarea id="entrada" name="entrada" cols="40" rows="13"
+        placeholder="Escreva o que deseja codificar:"></textarea>
+        </div>
+        <br><br>
+
+
+        <div class="botaoRadio">
+        <input type="radio" id="base64" name="selecao">
+        <label for="base64"></label>base64</label>
+        
+        <input type="radio" id="cifra" name="selecao">
+        <label for="base64">Cifra de César</label>
+        <br><br>
+
+            <div class="cifraKey">
+            <input type="number" id="chaveCifra" name="chave">
+            <label for="chave">N° da Chave</label>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="botoesCripto">
+        <input type="submit" id="btnCode" value="Codificar" onclick="checar()" >
+        <input type="submit" id="btnUncode" value="Decodificar">
+        </div>
+        <br><br>
+
+        <div class="saidaCripto">
+        <textarea id="entrada" cols="40" rows="13" readonly placeholder="Aqui aparece sua mensagem codificada."></textarea>
+        </div>
+    </form>
+
+</body>
+</html>
