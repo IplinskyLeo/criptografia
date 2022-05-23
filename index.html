@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador</title>
     <!-- <script src="script.js" defer></script> -->
-    <script src="scriptteste.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -14,10 +14,10 @@
 
     <form action="">
         <div class="entradaUser">
-        <textarea id="entrada" name="entrada" cols="40" rows="13"
+        <textarea id="entradaaa" name="entrada" cols="40" rows="13"
         placeholder="Escreva o que deseja codificar:"></textarea>
         </div>
-        <br><br>
+        <br>
 
 
         <div class="botaoRadio">
@@ -33,16 +33,19 @@
             <label for="chave">N° da Chave</label>
             </div>
         </div>
-        <br><br>
+        <br>
 
         <div class="botoesCripto">
-        <input type="submit" id="btnCode" value="Codificar" onclick="checar()" >
-        <input type="submit" id="btnUncode" value="Decodificar">
+        <!-- <input type="submit" id="btnCode" required onclick="checar()" > -->
+        <!-- <input type="submit" id="btnUncode" value="Deecodificar"> -->
+        <button id="code">code</button>
+
+        
         </div>
-        <br><br>
+        <br>
 
         <div class="saidaCripto">
-        <textarea id="entrada" cols="40" rows="13" readonly placeholder="Aqui aparece sua mensagem codificada."></textarea>
+        <textarea id="saida" cols="40" rows="13" readonly placeholder="Aqui aparece sua mensagem codificada."></textarea>
         </div>
     </form>
 
