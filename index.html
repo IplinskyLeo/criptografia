@@ -7,38 +7,54 @@
     <title>Codificador</title>
     <!-- <script src="script.js" defer></script> -->
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <p> Codificador Resilia</p>
 
-    <form action="">
+    
         <div class="entradaUser">
-        <textarea id="entradaaa" name="entrada" cols="40" rows="13"
+        <textarea id="entradaaa" autofocus name="entrada" cols="40" rows="13"
         placeholder="Escreva o que deseja codificar:"></textarea>
         </div>
         <br>
 
 
         <div class="botaoRadio">
+            <div id="selecaoRadio">
         <input type="radio" id="base64" name="selecao">
         <label for="base64"></label>base64</label>
         
         <input type="radio" id="cifra" name="selecao">
         <label for="base64">Cifra de César</label>
-        <br><br>
-
-            <div class="cifraKey">
-            <input type="number" id="chaveCifra" name="chave">
-            <label for="chave">N° da Chave</label>
             </div>
-        </div>
         <br>
+
+            <div id="botaoRange" style="display: none; resize: none; width: 90px;">
+            <!-- <input type="number" id="chaveCifra" name="chave">
+            <label for="chave">N° da Chave</label> -->
+            <select id="oRange" list="tickmarks" min="1" max="7" step="1">
+                <option value="0">Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                
+            </select>
+            </div>
+
+        </div>
+        
 
         <div class="botoesCripto">
         <!-- <input type="submit" id="btnCode" required onclick="checar()" > -->
         <!-- <input type="submit" id="btnUncode" value="Deecodificar"> -->
-        <button id="code">code</button>
+        <button id="code">Codificar</button>
+        <button id="uncode">Decodificar</button>
 
         
         </div>
@@ -47,7 +63,6 @@
         <div class="saidaCripto">
         <textarea id="saida" cols="40" rows="13" readonly placeholder="Aqui aparece sua mensagem codificada."></textarea>
         </div>
-    </form>
 
 </body>
 </html>

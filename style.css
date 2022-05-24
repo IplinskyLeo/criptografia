@@ -1,0 +1,10 @@
+.botaoRadio{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* #selecaoRadio{
+    background-color: aqua;
+    display: none;
+} */
