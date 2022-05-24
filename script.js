@@ -32,27 +32,19 @@ base64.addEventListener('click', () =>{
 
 
 // selecao do botao para ver qual metodo sera criptografado
-document.getElementById('code').onclick = function(a){
-    var botaoRadio = document.getElementsByName('selecao');
+document.getElementById('code').addEventListener ('click', function(e) {
 
+    e.preventDefault()
+
+    var botaoRadio = document.getElementsByName('selecao');
         // aqui vai a funcao de codificar em base64
         if (botaoRadio[0].checked) {
 
 
-            code.addEventListener('click', () =>{
+           
                 saida.value = btoa(entrada.value);
-            
-            });
-            
-            uncode.addEventListener('click', () =>{
-                saida.value = atob(saida.value);
-            });
-
         }
 
-
-
-        
         // aqui vai a funcao de codificar em cifra de cesar
         else if (botaoRadio[1].checked){
             function hide(eee){
@@ -62,8 +54,13 @@ document.getElementById('code').onclick = function(a){
         console.log (`voce escolheu a 2 opcao, cifra de cesar 
         sua chave é:${chave.value}`)}
         // segundo criptografar segundo a chave
-    }
+})
 
+document.getElementById('uncode').addEventListener ('click', function(e) {
+
+        saida.value = atob(saida.value);
+    
+})
 
     
 
