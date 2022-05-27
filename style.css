@@ -5,6 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .botaoRadio{
     display: flex;
@@ -27,10 +28,44 @@ body{
 }
 .main{
     background-color: aquamarine;
+    width: 100%;
 }
+#entradaaa,#saida{
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 div{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+button{
+    background-color: rgb(255, 255, 255);
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 3px;
+}
+.botoesCripto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+#selecaoRadio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+p{
+    font-weight: bold;
+    font-size: 30px;
+}
+#botaoRange{
+    padding: 10px;
 }
