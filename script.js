@@ -14,7 +14,7 @@ const rangee = document.querySelector('#oRange')
 console.log(chave.value)
 
 cifra.addEventListener('click', () =>{
-    displayChave.style.display = 'flex'
+    displayChave.style.display = 'flex';
     displayChave.style.flexDirection = 'column'
 })
 base64.addEventListener('click', () =>{
@@ -58,7 +58,7 @@ document.getElementById('code').addEventListener ('click', function(e) {
 
 document.getElementById('uncode').addEventListener ('click', function(e) {
 
-        saida.value = atob(saida.value);
+        saida.value = atob(entrada.value);
     
 })
 
