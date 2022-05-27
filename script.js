@@ -94,7 +94,7 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
     
             // formula: ( codLetra + Desloc ) % TamAlfabeto
             // dps tentar fazer com split>loop>append (ideia alternativa) p ver se é possivel
-            // pq nao consegui botar o lowercase na var?
+            // pq nao consegui botar o lowercase na var
             if (entrada == entrada.toUpperCase()){
                 for (let i = 0; i < entrada.length; i++) {
                     saida += String.fromCharCode((entrada.charCodeAt(i) - (chave2 + 26) - 65) % 26 + 65); 
@@ -102,7 +102,7 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
                 
             }else if (entrada == entrada.toLowerCase()){
                 for (let i = 0; i < entrada.length; i++) {
-                    saida += String.fromCharCode((entrada.charCodeAt(i) - (chave2 + 26) - 97) % 26 + 97); 
+                    saida += String.fromCharCode((entrada.charCodeAt(i) + 26 - (chave2 ) - 97) % 26 + 97); 
                 }   console.log(saida)
                 document.getElementById('saida').innerHTML = saida
             }

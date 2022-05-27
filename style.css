@@ -6,6 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
 }
 .botaoRadio{
     display: flex;
@@ -24,10 +25,9 @@ main{
     background-color: rgb(86, 86, 86);
 }
 body{
-    background-color: aqua;
+    background-color: aquamarine;
 }
 .main{
-    background-color: aquamarine;
     width: 100%;
 }
 #entradaaa,#saida{
@@ -65,6 +65,7 @@ button{
 p{
     font-weight: bold;
     font-size: 30px;
+    color: rgb(249, 249, 0);
 }
 #botaoRange{
     padding: 10px;
