@@ -16,17 +16,40 @@
 // }}
 // codigo()
 
-function cifraCesar(){
-    let entrada = document.querySelector('#aentrada').value;
-    let chave = 1;
-    let saida = ''
 
-    for (let i = 0; i < entrada.length; i++) {
-        saida += String.fromCharCode((entrada.charCodeAt(i) + chave - 65) % 26 + 65); 
-      } console.log(saida)
+code.addEventListener('click', function(e){
+    e.preventDefault;
+    console.log('code')
+
+
+    function cifraCesar(){
+        let entrada = document.querySelector('#Entrada').value;
+        let saida = '';
+        let chave = 2;
+        
+        // formula: ( codLetra + Desloc ) % TamAlfabeto
+        // dps tentar fazer com split>loop>append (ideia alternativa) p ver se é possivel
+            if (entrada == entrada.toUpperCase()){
+        for (let i = 0; i < entrada.length; i++) {
+            saida += String.fromCharCode((entrada.charCodeAt(i) + chave - 65) % 26 + 65); 
+          } console.log(saida)
+            
+        }else if (entrada == entrada.toLowerCase()){
+            for (let i = 0; i < entrada.length; i++) {
+                saida += String.fromCharCode((entrada.charCodeAt(i) + chave - 97) % 26 + 97); 
+              } console.log(saida)
+        }else {
+            alert('Sua entrada não é suportada ainda. Digite apenas texto. Estamos em constante evolução!')
+        }
+        
+
 }
+    
+    cifraCesar()
 
-aa()
+})
+
+
 
 
 
