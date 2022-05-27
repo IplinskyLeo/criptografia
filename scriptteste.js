@@ -1,29 +1,32 @@
-const texto = ('A Bc');
-const chave = 1;
-let contador  = '';
-let varGlob = 66;
-var texto2= texto.split('')
+// const texto = ('A Bc');
+// const chave = 1;
+// let contador  = '';
+// var texto2= texto.split('')
+// let textoAscii = '';
 
-console.log(texto)
-console.log(texto2)
-console.log('--')
-// console.log()
+// console.log(texto)
+// console.log(texto2)
+// // console.log()
 
-function cod(){
-for (var i=0; texto2.length < i; i++){
-    
+// function codigo(){
+// for (var i=0;i<5;i++){
+//     textoAscii = texto2[i]
+//     let textoAscii2 = textoAscii.charCodeAt(i);
+//     console.log(textoAscii)
+// }}
+// codigo()
+
+function cifraCesar(){
+    let entrada = document.querySelector('#aentrada').value;
+    let chave = 1;
+    let saida = ''
+
+    for (let i = 0; i < entrada.length; i++) {
+        saida += String.fromCharCode((entrada.charCodeAt(i) + chave - 65) % 26 + 65); 
+      } console.log(saida)
 }
 
-
-
-}
-
-
-
-
-
-
-
+aa()
 
 
 
