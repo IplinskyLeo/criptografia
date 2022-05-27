@@ -22,42 +22,51 @@ base64.addEventListener('click', () =>{
 
 
 
-// selecao do botao para ver qual metodo sera criptografado
+// selecao do botao que vai criptografar.
 document.getElementById('code').addEventListener ('click', function(e) {
     e.preventDefault()
-
-    
-        // aqui vai a funcao de codificar em base64
+        //codificar em base64.
         if (botaoRadio[0].checked) {
                 saida.value = btoa(entrada.value);
         }
 
-        // aqui vai a funcao de codificar em cifra de cesar
+
+        //codificar em cifra de cesar.
         else if (botaoRadio[1].checked){
+
             function hide(){
                 document.getElementById("#botaoRange").style.display = "none";
             }
-        // primeiro pegar o input da chave
-        console.log (`voce escolheu a 2 opcao, cifra de cesar 
+
+        console.log (`""voce escolheu a 2 opcao, cifra de cesar 
         sua chave é:${chave.value}`)
     
         if (chave.value == 0){
-            alert('entrada invalida! Por favor selecione um número.')}
-    
-            cifraCesar()
-            function cifraCesar(){
-                const entradaz = document.querySelector('#entradaaa');
-                // let chave = 1;
-                let saida = ''
-            
-                for (let i = 0; i < entradaz.length; i++) {
-                    saida += String.fromCharCode((entradaz.charCodeAt(i) + chave - 65) % 26 + 65); 
-                } 
-                console.log(entrada.value)
-                console.log(saida.value)
-            }
+            alert('entrada invalida! Por favor selecione um número.')
+        }
     }
+    cifraCesar()
+    function cifraCesar(){
+        let entrada = document.querySelector('#entradaaa').value;
+        let saida = '';
+        const chave2 = parseInt(rangee.value);
+        
+        console.log (`Voce escolheu a 2 opcao, cifra de cesar 
+        sua chave é:${chave2}`)
 
+        // formula: ( codLetra + Desloc ) % TamAlfabeto
+        // dps tentar fazer com split>loop>append (ideia alternativa) p ver se é possivel
+            if (entrada == entrada.toUpperCase()){
+        for (let i = 0; i < entrada.length; i++) {
+            saida += String.fromCharCode((entrada.charCodeAt(i) + chave2 - 65) % 26 + 65); 
+          } console.log(saida)
+            
+        }else if (entrada == entrada.toLowerCase()){
+            for (let i = 0; i < entrada.length; i++) {
+                saida += String.fromCharCode((entrada.charCodeAt(i) + chave2 - 97) % 26 + 97); 
+              } console.log(saida)
+        }
+    }
 })
 
 document.getElementById('uncode').addEventListener ('click', function(e) {
@@ -69,6 +78,33 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
             alert('Digite seu texto codificado em base 64!')
         }
         }
+
+    else{
+
+        cifraCesar()
+        function cifraCesar(){
+            let entrada = document.querySelector('#entradaaa').value;
+            let saida = '';
+            const chave2 = parseInt(rangee.value);
+            
+            console.log (`Voce escolheu a 2 opcao, cifra de cesar 
+            sua chave é:${chave2}`)
+    
+            // formula: ( codLetra + Desloc ) % TamAlfabeto
+            // dps tentar fazer com split>loop>append (ideia alternativa) p ver se é possivel
+                if (entrada == entrada.toUpperCase()){
+            for (let i = 0; i < entrada.length; i++) {
+                saida += String.fromCharCode((entrada.charCodeAt(i) + chave2 - 65) % 26 + 65); 
+              } console.log(saida)
+                
+            }else if (entrada == entrada.toLowerCase()){
+                for (let i = 0; i < entrada.length; i++) {
+                    saida += String.fromCharCode((entrada.charCodeAt(i) + chave2 - 97) % 26 + 97); 
+                  } console.log(saida)
+            }
+        }
+
+    }
         
         
     
