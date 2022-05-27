@@ -80,7 +80,7 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
         }
 
     else{
-
+        
         cifraCesar()
         function cifraCesar(){
             let entrada = document.querySelector('#entradaaa').value;
@@ -100,7 +100,7 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
             }else if (entrada == entrada.toLowerCase()){
                 for (let i = 0; i < entrada.length; i++) {
                     saida += String.fromCharCode((entrada.charCodeAt(i) - (chave2 + 26) - 97) % 26 + 97); 
-                  } console.log(saida)
+                  }
             }
         }
 
