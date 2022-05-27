@@ -94,12 +94,12 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
             // dps tentar fazer com split>loop>append (ideia alternativa) p ver se é possivel
                 if (entrada == entrada.toUpperCase()){
             for (let i = 0; i < entrada.length; i++) {
-                saida += String.fromCharCode((entrada.charCodeAt(i) + chave2 - 65) % 26 + 65); 
+                saida += String.fromCharCode((entrada.charCodeAt(i) - (chave2 + 26) - 65) % 26 + 65); 
               } console.log(saida)
                 
             }else if (entrada == entrada.toLowerCase()){
                 for (let i = 0; i < entrada.length; i++) {
-                    saida += String.fromCharCode((entrada.charCodeAt(i) + chave2 - 97) % 26 + 97); 
+                    saida += String.fromCharCode((entrada.charCodeAt(i) - (chave2 + 26) - 97) % 26 + 97); 
                   } console.log(saida)
             }
         }

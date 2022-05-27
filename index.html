@@ -7,10 +7,11 @@
     <title>Codificador</title>
     <!-- <script src="script.js" defer></script> -->
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <main><div class="main">
     <p> Codificador Resilia.</p>
 
     
@@ -29,7 +30,7 @@
         <input type="radio" id="cifra" name="selecao">
         <label for="base64">Cifra de César</label>
             </div>
-        <br>
+        </div>
 
             <div id="botaoRange" style="display: none; resize: none; width: 90px;">
             <!-- <input type="number" id="chaveCifra" name="chave">
@@ -43,26 +44,20 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
-                
             </select>
             </div><br>
-
         </div>
         
-
         <div class="botoesCripto">
-        <!-- <input type="submit" id="btnCode" required onclick="checar()" > -->
-        <!-- <input type="submit" id="btnUncode" value="Deecodificar"> -->
-        <button id="code">Codificar</button>
-        <button id="uncode">Decodificar</button>
-
-        
-        </div>
-        <br>
+            <button id="code">Codificar</button>
+            <button id="uncode">Decodificar</button>
+        </div><br>
 
         <div class="saidaCripto">
-        <textarea id="saida" cols="40" rows="13" readonly placeholder="Aqui aparece sua mensagem codificada."></textarea>
+            <textarea id="saida" cols="40" rows="13" readonly placeholder="Aqui aparece sua mensagem codificada."></textarea>
         </div>
+    </div>
+    </main>
 
 </body>
 </html>
