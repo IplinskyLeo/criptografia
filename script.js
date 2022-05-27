@@ -7,11 +7,10 @@ const chave = document.querySelector('#oRange');
 const displayChave = document.querySelector('#botaoRange')
 const cifra = document.getElementById('cifra')
 const base64 = document.getElementById('base64')
+var botaoRadio = document.getElementsByName('selecao');
 
 const rangee = document.querySelector('#oRange')
 // const displaye = document.querySelector('#botaoRange')
-
-console.log(chave.value)
 
 cifra.addEventListener('click', () =>{
     displayChave.style.display = 'flex';
@@ -23,46 +22,59 @@ base64.addEventListener('click', () =>{
 
 
 
-// code.addEventListener("click", function(ee) {
-// ee.preventDefault();
-// })
-// uncode.addEventListener("click", function(ee) {
-//     ee.preventDefault();
-//     })
-
-
 // selecao do botao para ver qual metodo sera criptografado
 document.getElementById('code').addEventListener ('click', function(e) {
-
     e.preventDefault()
 
-    var botaoRadio = document.getElementsByName('selecao');
+    
         // aqui vai a funcao de codificar em base64
         if (botaoRadio[0].checked) {
-
-
-           
                 saida.value = btoa(entrada.value);
         }
 
         // aqui vai a funcao de codificar em cifra de cesar
         else if (botaoRadio[1].checked){
-            function hide(eee){
+            function hide(){
                 document.getElementById("#botaoRange").style.display = "none";
             }
         // primeiro pegar o input da chave
         console.log (`voce escolheu a 2 opcao, cifra de cesar 
-        sua chave é:${chave.value}`)}
-        // segundo criptografar segundo a chave
+        sua chave é:${chave.value}`)
+    
+        if (chave.value == 0){
+            alert('entrada invalida! Por favor selecione um número.')}
+    
+            cifraCesar()
+            function cifraCesar(){
+                const entradaz = document.querySelector('#entradaaa');
+                // let chave = 1;
+                let saida = ''
+            
+                for (let i = 0; i < entradaz.length; i++) {
+                    saida += String.fromCharCode((entradaz.charCodeAt(i) + chave - 65) % 26 + 65); 
+                } 
+                console.log(entrada.value)
+                console.log(saida.value)
+            }
+    }
+
 })
 
 document.getElementById('uncode').addEventListener ('click', function(e) {
 
-        saida.value = atob(entrada.value);
+    if (botaoRadio[0].checked) {
+        try {
+            saida.value = atob(entrada.value);
+        } catch (error) {
+            alert('Digite seu texto codificado em base 64!')
+        }
+        }
+        
+        
     
 })
 
-    
+
 
 
 
