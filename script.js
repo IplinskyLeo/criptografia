@@ -97,7 +97,7 @@ document.getElementById('uncode').addEventListener ('click', function(e) {
             // pq nao consegui botar o lowercase na var
             if (entrada == entrada.toUpperCase()){
                 for (let i = 0; i < entrada.length; i++) {
-                    saida += String.fromCharCode((entrada.charCodeAt(i) - (chave2 + 26) - 65) % 26 + 65); 
+                    saida += String.fromCharCode((entrada.charCodeAt(i) + 26 - (chave2) - 65) % 26 + 65); 
                 }   console.log(saida)
                 
             }else if (entrada == entrada.toLowerCase()){
